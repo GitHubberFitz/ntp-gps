@@ -8,8 +8,6 @@ A bare minimum GPS Stratum 1 NTP server, using an inexpensive ($7-15) [USB-A GPS
 ## About:
 This container runs [NTPsec](https://www.ntpsec.org/) and [gpsd](https://gpsd.io/), built on the Docker [Alpine](https://hub.docker.com/_/alpine) image.
 
-<br />
-
 # - USB Reciever -
 Tested using the VK-162 GMOUSE USB External GPS Navigation Module [u-blox]
 
@@ -20,8 +18,6 @@ Tested using the VK-162 GMOUSE USB External GPS Navigation Module [u-blox]
 > Receive frequency: L1 [1575.42MHz] \
 > Tracking Channels: 50 \
 > Support DGPS [WAAS, EGNOS, and MSAS]
-
-<br />
 
 # - Configure -
 ## <u>Discover Reciever Mounted Path</u>
@@ -55,8 +51,6 @@ $> for sysdevpath in $(find /sys/bus/usb/devices/usb*/ -name dev); do (
 ### u-blox_AG_-_www.u-blox.com_u-blox_7_-_GPS_GNSS_Receiver ###
 /dev/<b>ttyACM1</b>
 </pre>
-
-<br />
 
 #  - Install -
 ## <u>Auto Configure:</u>
@@ -116,13 +110,11 @@ Host is up (0.0011s latency).
 PORT    STATE SERVICE VERSION
 123/udp open  ntp     NTP v4 (primary server)
 | ntp-info:
-|_  <b><u>receive time stamp: 2022-12-17T04:29:05</u></b>
+|_  <u><b>receive time stamp: 2022-12-17T04:29:05</b></u>
 MAC Address: 0A:0A:0A:0A:0A:0A (Unknown)
 
 Nmap done: 1 IP address (1 host up) scanned in 10.64 seconds
 </pre>
-
-<br />
 
 # - DHCP -
 If you are using a local dhcp server such as [Dnsmasq](https://dnsmasq.org/) or [Pi-hole](https://pi-hole.net/), you can add the [DHCP option 42](http://www.faqs.org/rfcs/rfc1769.html) to advertise the NTP server to all DHCP clients
@@ -167,7 +159,7 @@ PORT   STATE SERVICE
 |   Subnet Mask: 255.255.255.0
 |   Broadcast Address: 192.168.0.255
 |   Domain Name Server: 192.168.0.1
-|   <b><u>NTP Servers: 192.168.0.1</u></b>
+|   <u><b>NTP Servers: 192.168.0.1</b></u>
 |_  Router: 192.168.0.1
 MAC Address: 0A:0A:0A:0A:0A:0A (Unknown)
 
