@@ -62,7 +62,7 @@ docker run -d \
   --cap-add SYS_TIME \
   --device=/dev/ \
   -e TZ=$(cat /etc/timezone) \
-  -p 124:123/udp \
+  -p 123:123/udp \
 fitzdockerhub/ntp-gps:latest
 ```
 
